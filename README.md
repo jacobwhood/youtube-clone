@@ -1,2 +1,2 @@
 # youtube-clone
-YouTube clone (TypeScript, React Native, Redux, Node)
+YouTube clone (TypeScript, React, Redux, Node)
