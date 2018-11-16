@@ -1,0 +1,38 @@
+{
+  "name": "youtube-clone",
+  "version": "1.0.0",
+  "description": "YouTube clone",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server-dev": "nodemon server/index.js",
+    "react-dev": "webpack -d --watch",
+    "start": "webpack --mode production && node server/index.js",
+    "build": "webpack --mode production"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jacobwhood/youtube-clone.git"
+  },
+  "author": "Jacob Hood",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jacobwhood/youtube-clone/issues"
+  },
+  "homepage": "https://github.com/jacobwhood/youtube-clone#readme",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "css-loader": "^1.0.1",
+    "dotenv": "^6.1.0",
+    "express": "^4.16.4",
+    "path": "^0.12.7",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-redux": "^5.1.1",
+    "react-router-dom": "^4.3.1",
+    "redux": "^4.0.1",
+    "request": "^2.88.0",
+    "style-loader": "^0.23.1"
+  }
+}
