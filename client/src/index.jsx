@@ -13,6 +13,6 @@ const App = () => (
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />, document.getElementById('app')
-  </Provider>
+    <App />
+  </Provider>, document.getElementById('app')
 );
