@@ -12,7 +12,7 @@ import UserSavedVideos from './components/UserSavedVideos.jsx';
 const App = () => (
   <div className='app-container'>
     <Switch>
-      <Route exact path='/' render={props => <LandingPage  ...props />} />
+      <Route exact path='/' render={props => <LandingPage />} />
       <Route exact path='/search' component={Search} />
       <Route exact path='/users/:userId/videos' component={UserSavedVideos} />
       <Redirect to='/' />
