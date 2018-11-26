@@ -4,7 +4,13 @@
 const express = require('express');
 const router = express.Router();
 
-router.get('', (req, res) => {
+const youtubeRoutes = require('./youtube-routes');
+const databaseRoutes = require('./database-routes');
+
+router.use('/youtube', youtubeRoutes);
+router.use('/database', databaseRoutes);
+
+router.get('/', (req, res) => {
   console.log('hit endpoint: /api/');
   res.sendStatus(200);
 });
