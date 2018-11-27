@@ -1,25 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const youtubeApi = require('googleapis').google.youtube('v3');
+const youtubeUtil = require('../util/youtube.js');
 
 // GET /api/youtube/search
 router.get('/search', (req, res) => {
-  const { query } = req.query;
-
-  const options = {
-    key: process.env.YOUTUBE_API_KEY,
-    maxResults: 10,
-    part: 'snippet',
-    q: query,
-    type: 'video'
-  };
-
-  youtubeApi.search.list(options, (err, response) => {
+  youtubeUtil.searchVideos(req.query.query, (err, videos) => {
     if (err) {
-      console.log('error retreiving search results from Youtube APi: ', err);
-      res.send(err);
+      console.log('Error in Youtube util searchVideos cb: ', err);
+      res.sendStatus(500);
     } else {
-      res.send(response.data);
+      res.send(videos);
     }
   });
 });
