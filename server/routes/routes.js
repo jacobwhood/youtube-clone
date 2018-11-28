@@ -4,11 +4,9 @@
 const express = require('express');
 const router = express.Router();
 
-const youtubeRoutes = require('./youtube-routes');
-const databaseRoutes = require('./database-routes');
+const videoRoutes = require('./videos.js');
 
-router.use('/youtube', youtubeRoutes);
-router.use('/database', databaseRoutes);
+router.use('/videos', videoRoutes);
 
 router.get('/', (req, res) => {
   console.log('hit endpoint: /api/');
