@@ -1,4 +1,4 @@
-
+// TODO: set up database communication layer in here
 
 module.exports.saveVideoToDatabase = () => {
 
