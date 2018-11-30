@@ -17,18 +17,16 @@ router.get('/search', (req, res) => {
   });
 });
 
-// POST  /videos/like  (userId, videoId)
+// POST  /api/videos/like  (userId, videoId)
 router.post('/like', (req, res) => {
   let { userId, videoId } = req.query;
 
-
 });
 
-// GET   /videos/getlikedvideos
+// GET   /api/videos (userId)
 router.get('/', (req, res) => {
   let { userId } = req.query;
 
-  
 });
 
 module.exports = router;

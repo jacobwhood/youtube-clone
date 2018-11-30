@@ -4,7 +4,6 @@ const app = express();
 const path = require('path');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const request = require('request');
 const routes = require('./routes/routes.js');
 
 app.use(express.static(__dirname + '/../client/dist'));
